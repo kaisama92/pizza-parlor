@@ -2,8 +2,8 @@
 
 // Pizza Business Logic
 
-function Pizza([topping1, topping2], small) {
-  this.toppings = [topping1, topping2];
+function Pizza(toppings, small) {
+  this.toppings = toppings;
   this.size = small;
   this.cost = 0;
 }
@@ -39,7 +39,12 @@ Pizza.prototype.sizePrice = function() {
 };
 
 Pizza.prototype.receipt = function() {
-  let receipt = "Your " + this.size + " pizza with " + this.toppings[0] + " and " + this.toppings[1] + " comes to a total of $" + this.cost;
+  let receipt;
+  if (this.toppings.length === 0) {
+    receipt = "Your " + this.size + " cheese pizza comes to a total of $" + this.cost;
+    return receipt;
+  } else
+  receipt = "Your " + this.size + " pizza with " + this.toppings[0] + " and " + this.toppings[1] + " comes to a total of $" + this.cost;
   return receipt;
 };
 
@@ -61,7 +66,6 @@ function evalToppings(top1, top2, top3) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  let inputName = document.getElementById("person1").value;
   let size = document.getElementById("select-pizza-size").value;
   let top1 = document.getElementById("topping1").value;
   let top2 = document.getElementById("topping2").value;
@@ -71,8 +75,8 @@ function handleSubmit(event) {
   let newPizza = new Pizza(topArray, size);
   newPizza.toppingsPrice();
   newPizza.sizePrice();
-  newPizza.name = inputName;
-  
+  newPizza.name = document.getElementById("person1").value;
+
 
 }
 

@@ -3,9 +3,13 @@
 <head>
   <script src="js/scripts.js"></script>
   <link rel="stylesheet" href="css/styles.css" type="text/css">
-  <title>Document</title>
+  <title>Kai's Pizza Parlor</title>
 </head>
 <body>
+  <h1>Kai's Pizza Parlor</h1>
+  <p>Hello and welcom to Kai's Pizza Parlor! Please fill out the form below and we'll get your pizza ready in a jiffy!</p>
+  <p>Please note that leaving all of the dropdowns regarding toppings will result in a cheese pizza of the size chosen.</p>
+
   <form id="pizza-form">
     <label for="person1">Your Name: </label>
     <input id="person1" type="text" name="person1">
@@ -21,27 +25,29 @@
     
     <label for="topping1">Select your first topping:</label>
     <select id="topping1">
-      <option value="select-one">Select One</option>
+      <option value="0">Select One</option>
       <option value="pepperoni">Pepperoni</option>
       <option value="anchovies">Anchovies</option>
     </select>
 
     <label for="topping2">Select your second topping:</label>
     <select id="topping2">
-      <option value="select-one">Select One</option>
+      <option value="0">Select One</option>
       <option value="bacon">Bacon</option>
       <option value="canadian-bacon">Canadian Bacon</option>
     </select>
 
     <label for="topping3">Select your third topping:</label>
     <select id="topping3">
-      <option value="select-one">Select One</option>
+      <option value="0">Select One</option>
       <option value="pineapple">Pineapple</option>
       <option value="olives">Black Olives</option>
     </select>
 
     <button type="submit">Submit</button>
   </form>
+
+
   
 </body>
 </html>
