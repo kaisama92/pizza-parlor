@@ -30,3 +30,11 @@ Code: createPizza.toppingsPrice();
       createPizza.sizePrice();
       createPizza.receipt();
 Expected Output: "Your small pizza with pepperoni and pineapple comes to a total of $9
+
+### Describe evalToppings()
+
+Test: "It should only add a topping if a topping was selected."
+
+Code: let topArray = [];
+      evalToppings(0, "bacon", "pineapple");
+Expected Output: topArray = ["bacon", "pineapple"]
