@@ -43,10 +43,12 @@ Pizza.prototype.receipt = function() {
   if (this.toppings.length === 0) {
     receipt = this.name + "! Your " + this.size + " cheese pizza comes to a total of $" + this.cost;
     return receipt;
-  } else if (this.toppings.lenth == 1) {
+  } else if (this.toppings.length === 1) {
     receipt = this.name + "! Your " + this.size + " pizza with " + this.toppings[0] + " comes to a total of $" + this.cost;
     return receipt
-  }
+  } else if (this.toppings.length === 2) {
+    receipt = this.name + "! Your " + this.size + " pizza with " + this.toppings[0] + " and " + this.toppings[1] + " comes to a total of $" + this.cost;
+  } else 
   receipt = this.name + "! Your " + this.size + " pizza with " + this.toppings[0] + ", " + this.toppings[1] + ", and " + this.toppings[2] +  " comes to a total of $" + this.cost;
   return receipt;
 };

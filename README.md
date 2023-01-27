@@ -47,6 +47,13 @@ let myPizza = new Pizza { toppings: ["pepperoni"], size: "small",...}
 Code: myPizza.receipt();
 Expected Output: "this.name! Your small pizza with pepperoni comes to a total of $7" 
 
+Test: "It should return a separate statement if 2 toppings were chosen."
+let myPizza = new Pizza { toppings: ["pepperoni", "bacon"], size: "small",...}
+Code: myPizza.receipt();
+Expected Output: "this.name! Your small pizza with pepperoni and bacon comes to a total of $11"
+
+
+
 ### Describe evalToppings()
 
 Test: "It should only add a topping if a topping was selected."
