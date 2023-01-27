@@ -21,6 +21,12 @@ Pizza.prototype.toppingsPrice = function() {
   if (this.toppings.includes("olives")) {
     this.cost += 1;
   }
+  if (this.toppings.includes("anchovies")) {
+    this.cost += 3;
+  }
+  if (this.toppings.includes("canadian-bacon")) {
+    this.cost += 3;
+  }
 };
 
 Pizza.prototype.sizePrice = function() {
