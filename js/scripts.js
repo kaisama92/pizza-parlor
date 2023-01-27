@@ -46,18 +46,16 @@ Pizza.prototype.receipt = function() {
 // evalToppings Business Logic
 
 function evalToppings(top1, top2, top3) {
-  if (top1 !== 0) {
+  if (top1 !== "0") {
   topArray.push(top1);
   };
-  if (top2 !== 0) {
+  if (top2 !== "0") {
     topArray.push(top2);
   };
-  if (top3 !== 0) {
+  if (top3 !== "0") {
     topArray.push(top3);
   };
 }
-
-
 
 // UI Logic
 
@@ -73,6 +71,8 @@ function handleSubmit(event) {
   let newPizza = new Pizza(topArray, size);
   newPizza.toppingsPrice();
   newPizza.sizePrice();
+  newPizza.name = inputName;
+  
 
 }
 
