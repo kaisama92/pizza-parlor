@@ -1,3 +1,19 @@
+# _pizza-parlor_
+
+#### By _Kai Clausen_
+
+#### _This application takes your pizza order and returns it to you with the price of the pizza._
+
+## Technologies Used
+
+* _HTML_
+* _JavaScript_ 
+* _CSS_
+
+## Description
+
+_This application utilizes constructors and prototypes to create a webpage that takes your order and returns it to you with a price based upon what you chose._ 
+
 ### Describe Pizza()
 
 Test: "It should create an object with two properties for topping and size."
@@ -52,8 +68,6 @@ let myPizza = new Pizza { toppings: ["pepperoni", "bacon"], size: "small",...}
 Code: myPizza.receipt();
 Expected Output: "this.name! Your small pizza with pepperoni and bacon comes to a total of $11"
 
-
-
 ### Describe evalToppings()
 
 Test: "It should only add a topping if a topping was selected."
@@ -61,3 +75,20 @@ Test: "It should only add a topping if a topping was selected."
 Code: let topArray = [];
       evalToppings(0, "bacon", "pineapple");
 Expected Output: topArray = ["bacon", "pineapple"]
+
+## Setup/Installation 
+
+* _Clone this repository to you desktop_
+* _Navigate to the top directory_
+* _Open index.html in your preferred web browser_
+* _Interact with the web page_
+
+## Known Bugs
+
+* _Entering new information and hitting submit does not clear the previous result._ 
+
+## License
+
+MIT - Should you come across any problems, feel free to fix them yourself, or contact me at kaiclausen123@gmail.com
+
+Copyright (c) _2023_ _Kai Clausen_
