@@ -30,8 +30,13 @@ Pizza.prototype.sizePrice = function() {
   } else if (this.size.includes("medium")) {
     this.cost += 8;
   } else 
-  this. cost += 12;
+  this.cost += 12;
 };
+
+Pizza.prototype.receipt = function() {
+  let receipt = "Your " + this.size + " pizza with " + this.toppings[0] + " and " + this.toppings[1] + " comes to a total of $" + this.cost;
+  return receipt;
+}
 
 
 

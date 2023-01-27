@@ -22,3 +22,11 @@ Test: "It should increase this.cost of the Pizza object based on the size select
 Code: createPizza.sizePrice();
       createPizza;
 Expected Output: Pizza { toppings: ["pepperoni", "pineapple"], size: "small", cost: 5}
+
+### Describe Pizza.prototype.receipt()
+
+Test: "It should return a statement that gives the size of the pizza, the toppings, and the cost. 
+Code: createPizza.toppingsPrice();
+      createPizza.sizePrice();
+      createPizza.receipt();
+Expected Output: "Your small pizza with pepperoni and pineapple comes to a total of $9
