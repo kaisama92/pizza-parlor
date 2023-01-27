@@ -1,7 +1,6 @@
 
-function PizzaStore() {
-  this.pepperoni = { name: pepperoni }
-}
+
+// Pizza Business Logic
 
 function Pizza([topping1, topping2], small) {
   this.toppings = [topping1, topping2];
@@ -36,7 +35,9 @@ Pizza.prototype.sizePrice = function() {
 Pizza.prototype.receipt = function() {
   let receipt = "Your " + this.size + " pizza with " + this.toppings[0] + " and " + this.toppings[1] + " comes to a total of $" + this.cost;
   return receipt;
-}
+};
+
+// UI Logic
 
 
 
