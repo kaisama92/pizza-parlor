@@ -1,5 +1,3 @@
-
-
 // Pizza Business Logic
 
 function Pizza(small) {
@@ -8,7 +6,7 @@ function Pizza(small) {
   this.cost = 0;
 }
 
-Pizza.prototype.toppingsPrice = function() {
+Pizza.prototype.price = function() {
   if (this.toppings.includes("pepperoni")) {
     this.cost += 2;
   }
@@ -27,9 +25,6 @@ Pizza.prototype.toppingsPrice = function() {
   if (this.toppings.includes("canadian-bacon")) {
     this.cost += 3;
   }
-};
-
-Pizza.prototype.sizePrice = function() {
   if (this.size.includes("small")) {
     this.cost += 5;
   } else if (this.size.includes("medium")) {
@@ -57,7 +52,6 @@ Pizza.prototype.receipt = function() {
 
 function evalToppings(top1, top2, top3) {
   let evalArray = [];
-  console.log(top1 + top2 + top3);
   if (top1 !== "0") {
     evalArray.push(top1);
   };
@@ -76,32 +70,21 @@ function handleSubmit(event) {
   event.preventDefault();
   let size = document.getElementById("select-pizza-size").value;
   let top1 = document.getElementById("topping1").value;
-  console.log(top1);
   let top2 = document.getElementById("topping2").value;
-  console.log(top2);
   let top3 = document.getElementById("topping3").value;
-  console.log(top3);
   let newPizza = new Pizza(size);
   newPizza.toppings = evalToppings(top1, top2, top3);
-  console.log(newPizza);
   newPizza.name = document.getElementById("person1").value;
-  newPizza.toppingsPrice();
-  newPizza.sizePrice();
+  newPizza.price();
   let p = document.createElement("p");
   let receiptDiv = document.createElement("div.receipt");
   let body = document.querySelector("body");
   p.append(newPizza.receipt());
   receiptDiv.append(p);
   body.append(receiptDiv);
-  
-  
-
-
 }
-
 
 window.addEventListener("load", function() {
   const form = document.querySelector("form#pizza-form");
   form.addEventListener("submit", handleSubmit)
 })
-
