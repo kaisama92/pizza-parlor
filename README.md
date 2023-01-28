@@ -83,6 +83,7 @@ Expected Output: topArray = ["bacon", "pineapple"]
 * _Navigate to the top directory_
 * _Open index.html in your preferred web browser_
 * _Interact with the web page_
+* _Additionally  you can deploy the finished product in your ***[browser](https://kaisama92.github.io/pizza-parlor/)***.
 
 ## Known Bugs
 
