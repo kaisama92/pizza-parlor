@@ -77,8 +77,9 @@ function handleSubmit(event) {
   newPizza.name = document.getElementById("person1").value;
   newPizza.price();
   let p = document.createElement("p");
-  let receiptDiv = document.createElement("div.receipt");
+  let receiptDiv = document.createElement("div");
   let body = document.querySelector("body");
+  p.setAttribute("class", "corners");
   p.append(newPizza.receipt());
   receiptDiv.append(p);
   body.append(receiptDiv);
